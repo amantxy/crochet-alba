@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crochet Alba · Ganchillo desde cero hasta amigurumis</title>
+<meta name="description" content="Curso de ganchillo desde cero: cómo coger la aguja, puntos básicos, proyectos por nivel y tiempo, hasta amigurumis. Con ilustraciones y vídeos en castellano.">
+<style>
+:root{
+  --bg:#fbf6ef; --card:#ffffff; --ink:#3a2e2a; --soft:#7a6a62; --line:#eadfd3;
+  --terra:#c8643b; --terra-l:#f6e1d6; --sage:#6f8f72; --sage-l:#e3ede2;
+  --plum:#8a5a83; --plum-l:#efe2ee; --sun:#e0a63a; --sun-l:#fbefd6;
+  --sky:#4f7fa8; --sky-l:#e0ebf4;
+  --yarn:#c8643b; --yarn2:#6f8f72; --hook:#8c8f99;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25}
+a{color:var(--terra)}
+header.hero{background:linear-gradient(135deg,#f3d9c8,#e8efe3);padding:2.2rem 1.2rem 1.6rem;text-align:center}
+.hero h1{margin:.2rem 0;font-size:2.1rem}
+.hero p{max-width:640px;margin:.5rem auto;color:var(--soft)}
+.hero .tools{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
+button,.btn{font:inherit;border:0;border-radius:999px;padding:.55rem 1.1rem;background:var(--terra);color:#fff;cursor:pointer;text-decoration:none;display:inline-block}
+button.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+nav.top{position:sticky;top:0;z-index:10;background:rgba(251,246,239,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;padding:.5rem .6rem}
+nav.top a{display:inline-block;padding:.35rem .75rem;margin:0 .15rem;border-radius:999px;text-decoration:none;color:var(--ink);font-size:.92rem;background:#fff;border:1px solid var(--line)}
+nav.top a:hover{background:var(--terra-l)}
+main{max-width:860px;margin:0 auto;padding:1rem}
+section.level{margin:2.2rem 0}
+.lvl-head{border-radius:18px;padding:1.1rem 1.2rem;margin-bottom:1rem}
+.lvl-head h2{margin:.1rem 0 .3rem;font-size:1.6rem}
+.lvl-head .meta{display:flex;gap:.5rem;flex-wrap:wrap;font-size:.88rem}
+.pill{background:rgba(255,255,255,.75);border-radius:999px;padding:.15rem .7rem}
+.c0{background:var(--sun-l)} .c1{background:var(--terra-l)} .c2{background:var(--sage-l)}
+.c3{background:var(--sky-l)} .c4{background:var(--plum-l)} .c5{background:#f6e6dc}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1rem 1.1rem;margin:.8rem 0}
+details.lesson{background:var(--card);border:1px solid var(--line);border-radius:16px;margin:.7rem 0;overflow:hidden}
+details.lesson>summary{list-style:none;cursor:pointer;padding:.85rem 1rem;display:flex;align-items:center;gap:.7rem;font-weight:600}
+details.lesson>summary::-webkit-details-marker{display:none}
+details.lesson>summary .num{flex:0 0 2rem;height:2rem;border-radius:50%;background:var(--terra-l);color:var(--terra);display:grid;place-items:center;font-size:.9rem}
+details.lesson>summary .t{flex:1}
+details.lesson>summary .time{font-weight:400;font-size:.82rem;color:var(--soft)}
+details.lesson[open]>summary{border-bottom:1px solid var(--line);background:#fffaf5}
+details.lesson.project>summary .num{background:var(--sage-l);color:var(--sage)}
+.body{padding:.6rem 1.1rem 1.1rem}
+.body ol li,.body ul li{margin:.3rem 0}
+figure{margin:1rem 0;text-align:center}
+figure svg{width:100%;max-width:560px;height:auto;background:#fffdf9;border:1px solid var(--line);border-radius:14px}
+figcaption{font-size:.88rem;color:var(--soft);margin-top:.35rem}
+.tip{background:var(--sun-l);border-left:4px solid var(--sun);padding:.6rem .9rem;border-radius:8px;margin:.8rem 0}
+.warn{background:#fde8e4;border-left:4px solid #c9503a;padding:.6rem .9rem;border-radius:8px;margin:.8rem 0}
+.videos{display:flex;flex-direction:column;gap:.4rem;margin:.8rem 0}
+.videos a{display:flex;align-items:center;gap:.6rem;background:#fff4f1;border:1px solid #f2d6cd;border-radius:12px;padding:.5rem .8rem;text-decoration:none;color:var(--ink)}
+.videos a::before{content:"▶";display:grid;place-items:center;flex:0 0 1.9rem;height:1.9rem;border-radius:50%;background:#e33;color:#fff;font-size:.75rem}
+.pattern{font-family:ui-monospace,Consolas,monospace;font-size:.92rem;background:#faf5ee;border:1px dashed #d8c7b6;border-radius:10px;padding:.8rem 1rem;white-space:pre-wrap;line-height:1.7}
+table{border-collapse:collapse;width:100%;font-size:.93rem;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.45rem .5rem;text-align:left;vertical-align:top}
+th{background:#f6eee5}
+.done-box{display:flex;align-items:center;gap:.5rem;margin-top:.9rem;padding:.6rem .8rem;background:var(--sage-l);border-radius:10px;font-weight:600}
+.done-box input{width:1.3rem;height:1.3rem;accent-color:var(--sage)}
+details.lesson.is-done>summary .num{background:var(--sage);color:#fff}
+details.lesson.is-done>summary .num::after{content:"✓"} details.lesson.is-done>summary .num span{display:none}
+.progress{max-width:420px;margin:1rem auto 0}
+.bar{height:12px;background:#fff;border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--terra),var(--sun));transition:width .4s}
+.progress small{color:var(--soft)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem}
+footer{text-align:center;color:var(--soft);font-size:.85rem;padding:2rem 1rem 3rem}
+svg text{font-family:system-ui,sans-serif;fill:var(--ink)}
+/* modo zurdo: espeja los dibujos pero no los textos */
+body.zurdo svg .draw{transform:scaleX(-1);transform-box:view-box;transform-origin:center}
+body.zurdo svg .draw text{transform:scaleX(-1);transform-box:fill-box;transform-origin:center}
+.zurdo-note{display:none}
+body.zurdo .zurdo-note{display:block}
+@media (max-width:600px){body{font-size:16px}.hero h1{font-size:1.7rem}main{padding:.6rem}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div style="font-size:2.4rem">🧶</div>
+  <h1>Crochet Alba</h1>
+  <p>Ganchillo desde cero absoluto hasta tu primer amigurumi. Lecciones cortas, dibujos paso a paso, vídeos en castellano y proyectos ordenados por nivel y por tiempo.</p>
+  <div class="tools">
+    <button id="btnZurdo" class="alt">✋ Soy zurda/o</button>
+    <a class="btn" href="#empezar">Empezar</a>
+  </div>
+  <div class="progress">
+    <div class="bar"><i id="barFill"></i></div>
+    <small id="barText">0 de 0 completados</small>
+  </div>
+</header>
+
+<nav class="top">
+  <a href="#empezar">Antes de empezar</a>
+  <a href="#n0">0 · Coger la aguja</a>
+  <a href="#n1">1 · Punto bajo</a>
+  <a href="#n2">2 · Puntos altos</a>
+  <a href="#n3">3 · En redondo</a>
+  <a href="#n4">4 · Amigurumi básico</a>
+  <a href="#n5">5 · Osito</a>
+  <a href="#ayuda">Glosario y problemas</a>
+</nav>
+
+<main>
+
+<!-- ===================== ANTES DE EMPEZAR ===================== -->
+<section id="empezar" class="level">
+  <div class="lvl-head c0">
+    <h2>Antes de empezar</h2>
+    <div class="meta"><span class="pill">⏱ 15 min de lectura</span><span class="pill">🛒 Material</span><span class="pill">🗓 Plan de 12 semanas</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Cómo usar esta web</h3>
+    <ul>
+      <li>Ve <b>en orden</b>: cada nivel usa lo que aprendiste en el anterior.</li>
+      <li>Cada lección tiene: <b>explicación paso a paso → dibujo → vídeos en castellano</b>. Lee primero, mira el dibujo y después el vídeo con la aguja en la mano.</li>
+      <li>Las <span style="color:var(--sage);font-weight:600">lecciones verdes</span> son <b>proyectos</b>: cosas reales que vas a terminar.</li>
+      <li>Marca <b>«Lo he conseguido»</b> al final de cada lección. Tu progreso se guarda en este navegador.</li>
+      <li>Si eres zurda/o, pulsa el botón <b>✋ Soy zurda/o</b> arriba: los dibujos se dan la vuelta para tu mano.</li>
+    </ul>
+    <div class="tip">💡 Con <b>20–30 minutos al día</b> llegarás al osito amigurumi en unas <b>10–12 semanas</b>. Es mejor un poco cada día que tres horas un domingo: las manos aprenden con repetición.</div>
+  </div>
+
+  <div class="card">
+    <h3>🛒 Material para empezar (niveles 0 a 3)</h3>
+    <table>
+      <tr><th>Qué</th><th>Cuál exactamente</th><th>Por qué</th></tr>
+      <tr><td>Aguja de ganchillo</td><td><b>5 mm</b>, mejor con mango ergonómico (de goma)</td><td>Gruesa = puntos grandes y fáciles de ver</td></tr>
+      <tr><td>Hilo</td><td>Acrílico o algodón <b>liso</b>, para aguja 4,5–5,5 mm (lo pone la etiqueta), de <b>color claro</b></td><td>Se ven bien los puntos. Evita negro, peludo o con brillos</td></tr>
+      <tr><td>Aguja lanera</td><td>Aguja grande de punta roma</td><td>Para esconder las hebras y coser</td></tr>
+      <tr><td>Tijeras</td><td>Pequeñas</td><td></td></tr>
+      <tr><td>Marcadores de puntos</td><td>De plástico tipo imperdible (o clips / hilo de otro color)</td><td>Imprescindibles en redondo</td></tr>
+    </table>
+    <h3>🧸 Material extra para amigurumis (niveles 4 y 5)</h3>
+    <table>
+      <tr><td>Hilo de algodón</td><td>Para aguja 3–3,5 mm (algodón 100% o «milk cotton»)</td></tr>
+      <tr><td>Aguja</td><td><b>2,5 o 3 mm</b> (más pequeña de lo que dice la etiqueta, para que el tejido quede apretado y no se vea el relleno)</td></tr>
+      <tr><td>Relleno</td><td>Fibra sintética (guata/miraguano)</td></tr>
+      <tr><td>Ojos de seguridad</td><td>8–10 mm (o hilo negro para bordarlos)</td></tr>
+      <tr><td>Alfileres</td><td>Para colocar las piezas antes de coser</td></tr>
+    </table>
+    <div class="warn">⚠️ Si el amigurumi es para un bebé o niño menor de 3 años, <b>no uses ojos de seguridad ni piezas pequeñas</b>: borda los ojos con hilo.</div>
+  </div>
+
+  <div class="card">
+    <h3>🗓 Plan por semanas</h3>
+    <table>
+      <tr><th>Semana</th><th>Nivel</th><th>Terminarás…</th></tr>
+      <tr><td>1</td><td>0 · Coger la aguja y cadeneta</td><td>Pulsera y marcapáginas</td></tr>
+      <tr><td>2–3</td><td>1 · Punto bajo en filas</td><td>Posavasos cuadrado y bufanda</td></tr>
+      <tr><td>4–5</td><td>2 · Medio punto alto y punto alto</td><td>Toallita de algodón y granny square</td></tr>
+      <tr><td>6–7</td><td>3 · Tejer en redondo</td><td>Posavasos redondo y cestita</td></tr>
+      <tr><td>8–9</td><td>4 · Amigurumi básico</td><td>Pelotita y pulpito</td></tr>
+      <tr><td>10–12</td><td>5 · Amigurumi completo</td><td>Osito de peluche</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Lo primero: conoce tu aguja</h3>
+    <figure>
+      <svg viewBox="0 0 520 170" role="img" aria-label="Partes de la aguja de ganchillo">
+        <g class="draw">
+          <path d="M40 92 q-14 0 -14 -12 q0 -10 10 -10 l6 0 q4 0 4 4 q0 4 -4 4 l-4 0 q-4 0 -4 4 q0 6 8 6 z" fill="var(--hook)"/>
+          <rect x="44" y="76" width="200" height="14" rx="7" fill="var(--hook)"/>
+          <rect x="230" y="70" width="60" height="26" rx="5" fill="#a9acb5"/>
+          <rect x="290" y="64" width="190" height="38" rx="19" fill="var(--terra)"/>
+          <line x1="34" y1="70" x2="34" y2="40" stroke="var(--ink)"/><text x="10" y="32" font-size="13">Cabeza (gancho)</text>
+          <line x1="70" y1="92" x2="70" y2="128" stroke="var(--ink)"/><text x="70" y="145" text-anchor="middle" font-size="13">Garganta</text>
+          <line x1="200" y1="76" x2="200" y2="40" stroke="var(--ink)"/><text x="232" y="32" text-anchor="middle" font-size="13">Caña (aquí van los bucles)</text>
+          <line x1="260" y1="96" x2="260" y2="128" stroke="var(--ink)"/><text x="260" y="145" text-anchor="middle" font-size="13">Apoyo del pulgar</text>
+          <line x1="390" y1="64" x2="390" y2="40" stroke="var(--ink)"/><text x="390" y="32" text-anchor="middle" font-size="13">Mango</text>
+        </g>
+      </svg>
+      <figcaption>El gancho siempre mira <b>hacia ti</b> (o un poco hacia abajo), nunca hacia el techo.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== NIVEL 0 ===================== -->
+<section id="n0" class="level">
+  <div class="lvl-head c0">
+    <h2>Nivel 0 · Coger la aguja y la cadeneta</h2>
+    <div class="meta"><span class="pill">🗓 Semana 1</span><span class="pill">⏱ ~3 h en total</span><span class="pill">⭐ Principiante absoluto</span></div>
+  </div>
+
+  <details class="lesson" data-id="l0-1">
+    <summary><span class="num"><span>1</span></span><span class="t">Cómo coger la aguja</span><span class="time">10 min</span></summary>
+    <div class="body">
+      <p>Hay dos formas. Las dos están bien; prueba ambas y quédate con la que te resulte cómoda. <span class="zurdo-note"><b>Zurdos:</b> la aguja va en la mano izquierda y el hilo en la derecha.</span></p>
+      <figure>
+        <svg viewBox="0 0 520 220" role="img" aria-label="Agarre de lápiz y agarre de cuchillo">
+          <g class="draw">
+            <text x="130" y="24" text-anchor="middle" font-size="15" font-weight="700">Como un lápiz</text>
+            <line x1="40" y1="190" x2="215" y2="60" stroke="var(--hook)" stroke-width="9" stroke-linecap="round"/>
+            <path d="M40 190 q-10 6 -4 -6" stroke="var(--hook)" stroke-width="6" fill="none"/>
+            <ellipse cx="118" cy="118" rx="18" ry="11" fill="#f1c9a8" stroke="#c99a78" transform="rotate(-35 118 118)"/>
+            <ellipse cx="135" cy="138" rx="20" ry="12" fill="#f1c9a8" stroke="#c99a78" transform="rotate(-35 135 138)"/>
+            <ellipse cx="152" cy="98" rx="22" ry="12" fill="#f6d5b8" stroke="#c99a78" transform="rotate(-35 152 98)"/>
+            <text x="190" y="140" font-size="12">índice encima</text>
+            <text x="58" y="98" font-size="12">pulgar</text>
+            <text x="150" y="172" font-size="12">corazón apoya</text>
+            <text x="390" y="24" text-anchor="middle" font-size="15" font-weight="700">Como un cuchillo</text>
+            <line x1="290" y1="150" x2="500" y2="110" stroke="var(--hook)" stroke-width="9" stroke-linecap="round"/>
+            <path d="M290 150 q-10 6 -6 -6" stroke="var(--hook)" stroke-width="6" fill="none"/>
+            <rect x="380" y="100" width="110" height="64" rx="30" fill="#f6d5b8" stroke="#c99a78"/>
+            <ellipse cx="365" cy="126" rx="26" ry="10" fill="#f1c9a8" stroke="#c99a78" transform="rotate(-10 365 126)"/>
+            <ellipse cx="372" cy="152" rx="20" ry="10" fill="#f1c9a8" stroke="#c99a78"/>
+            <text x="320" y="96" font-size="12">índice estirado encima</text>
+            <text x="330" y="190" font-size="12">mano rodea el mango</text>
+          </g>
+        </svg>
+        <figcaption>Los dedos pulgar e índice sujetan la aguja en el <b>apoyo del pulgar</b>, no en la caña.</figcaption>
+      </figure>
+      <ol>
+        <li>Coge la aguja con la mano con la que escribes.</li>
+        <li>Pon el pulgar y el índice en la parte plana (apoyo del pulgar).</li>
+        <li>El gancho mira hacia ti.</li>
+        <li>Sujeta <b>suave</b>, sin apretar: si te duele la mano, estás apretando demasiado.</li>
+      </ol>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=c%C3%B3mo+coger+la+aguja+de+ganchillo+y+el+hilo+principiantes+en+espa%C3%B1ol">Cómo coger la aguja y el hilo (diestros)</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=ganchillo+para+zurdos+principiantes+en+espa%C3%B1ol">Ganchillo para zurdos</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l0-2">
+    <summary><span class="num"><span>2</span></span><span class="t">Cómo sujetar el hilo (la tensión)</span><span class="time">15 min</span></summary>
+    <div class="body">
+      <p>La otra mano controla el hilo que viene del ovillo. A esto se le llama <b>tensión</b>: el hilo tiene que salir tirante pero sin estar duro.</p>
+      <figure>
+        <svg viewBox="0 0 520 240" role="img" aria-label="Recorrido del hilo entre los dedos">
+          <g class="draw">
+            <rect x="140" y="150" width="240" height="70" rx="30" fill="#f6d5b8" stroke="#c99a78"/>
+            <rect x="150" y="60" width="44" height="110" rx="22" fill="#f1c9a8" stroke="#c99a78"/>
+            <rect x="204" y="40" width="44" height="130" rx="22" fill="#f1c9a8" stroke="#c99a78"/>
+            <rect x="258" y="45" width="44" height="125" rx="22" fill="#f1c9a8" stroke="#c99a78"/>
+            <rect x="312" y="75" width="40" height="95" rx="20" fill="#f1c9a8" stroke="#c99a78"/>
+            <path d="M470 220 C430 200 360 190 340 150 C330 130 345 120 325 115 C300 110 290 100 280 92 C270 84 250 90 240 84 C226 76 215 72 196 70 C180 68 160 64 120 50 L60 30" stroke="var(--yarn)" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <circle cx="470" cy="220" r="18" fill="var(--yarn)" opacity=".85"/>
+            <text x="470" y="200" text-anchor="middle" font-size="12">ovillo</text>
+            <text x="358" y="92" font-size="12">meñique: 1 vuelta</text>
+            <text x="300" y="34" text-anchor="middle" font-size="12">anular: por debajo</text>
+            <text x="226" y="16" text-anchor="middle" font-size="12">corazón: por encima</text>
+            <text x="150" y="34" text-anchor="middle" font-size="12">índice: por encima</text>
+            <text x="8" y="16" font-size="12">hacia la aguja</text>
+          </g>
+        </svg>
+        <figcaption>Mano que NO tiene la aguja, vista desde arriba. Hay muchas formas; esta es la más habitual.</figcaption>
+      </figure>
+      <ol>
+        <li>Pasa el hilo alrededor del <b>meñique</b> (una vuelta, como un anillo flojo).</li>
+        <li>Llévalo por debajo del anular y del corazón y luego por encima del <b>índice</b>.</li>
+        <li>Levanta un poco el índice: ese trocito de hilo entre el índice y la aguja es el que vas a «pescar».</li>
+        <li>El pulgar y el corazón de esa mano sujetan el tejido justo debajo de la aguja.</li>
+      </ol>
+      <div class="tip">💡 Si te resulta incómodo, simplifica: solo pasa el hilo por encima del índice y sujétalo con los otros dedos cerrados. Lo importante es que el hilo no quede suelto.</div>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=c%C3%B3mo+sujetar+el+hilo+ganchillo+tensi%C3%B3n+principiantes+en+espa%C3%B1ol">Cómo sujetar el hilo y controlar la tensión</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l0-3">
+    <summary><span class="num"><span>3</span></span><span class="t">El nudo corredizo (para empezar)</span><span class="time">10 min</span></summary>
+    <div class="body">
+      <p>Todo trabajo de ganchillo empieza con este nudo, que se puede apretar o aflojar tirando del hilo.</p>
+      <figure>
+        <svg viewBox="0 0 520 170" role="img" aria-label="Tres pasos del nudo corredizo">
+          <g class="draw">
+            <text x="85" y="22" text-anchor="middle" font-size="14" font-weight="700">1</text>
+            <path d="M30 150 C40 60 140 60 120 110 C105 145 60 120 85 90 C100 70 140 80 150 150" stroke="var(--yarn)" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <text x="85" y="166" text-anchor="middle" font-size="12">haz un bucle</text>
+            <text x="260" y="22" text-anchor="middle" font-size="14" font-weight="700">2</text>
+            <path d="M205 150 C215 60 315 60 295 110 C280 145 235 120 260 90 C275 70 315 80 325 150" stroke="var(--yarn)" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <line x1="220" y1="60" x2="300" y2="112" stroke="var(--hook)" stroke-width="7" stroke-linecap="round"/>
+            <text x="260" y="166" text-anchor="middle" font-size="12">mete la aguja y saca el hilo</text>
+            <text x="435" y="22" text-anchor="middle" font-size="14" font-weight="700">3</text>
+            <line x1="370" y1="70" x2="500" y2="70" stroke="var(--hook)" stroke-width="7" stroke-linecap="round"/>
+            <ellipse cx="440" cy="70" rx="12" ry="16" stroke="var(--yarn)" stroke-width="5" fill="none"/>
+            <path d="M436 86 C430 120 410 140 400 150 M444 86 C450 120 470 140 480 150" stroke="var(--yarn)" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <text x="435" y="166" text-anchor="middle" font-size="12">tira de los dos hilos</text>
+          </g>
+        </svg>
+      </figure>
+      <ol>
+        <li>Deja un trozo de hilo de unos 15 cm (la «cola»).</li>
+        <li>Haz un bucle cruzando el hilo sobre sí mismo.</li>
+        <li>Por dentro del bucle, coge con la aguja el hilo que va al ovillo y sácalo.</li>
+        <li>Tira de la cola para ajustar el nudo a la aguja: debe quedar <b>ajustado pero deslizarse</b>.</li>
+      </ol>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=nudo+corredizo+ganchillo+principiantes+en+espa%C3%B1ol">Nudo corredizo / nudo inicial</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l0-4">
+    <summary><span class="num"><span>4</span></span><span class="t">La cadeneta (cad) y cómo contarla</span><span class="time">30 min</span></summary>
+    <div class="body">
+      <p>La cadeneta es el primer punto y la base de casi todo. Solo hay un movimiento: <b>echar hebra y sacarla por el bucle</b>.</p>
+      <p><b>Echar hebra</b> (o «lazada») significa pasar el hilo por encima de la aguja, de atrás hacia delante, para que el gancho lo pueda coger.</p>
+      <ol>
+        <li>Con el nudo en la aguja, echa hebra.</li>
+        <li>Gira un poco el gancho hacia abajo y saca la hebra por el bucle que tenías. ¡Ya tienes 1 cadeneta!</li>
+        <li>Repite. Ve subiendo los dedos de la otra mano para sujetar siempre cerca de la aguja.</li>
+      </ol>
+      <figure>
+        <svg viewBox="0 0 520 150" role="img" aria-label="Cadeneta y cómo contarla">
+          <g class="draw">
+            <circle cx="40" cy="70" r="9" fill="var(--yarn)"/>
+            <text x="40" y="105" text-anchor="middle" font-size="11">nudo</text>
+            <text x="40" y="118" text-anchor="middle" font-size="11">(no cuenta)</text>
+            <g fill="none" stroke="var(--yarn)" stroke-width="5">
+              <ellipse cx="80" cy="70" rx="22" ry="11"/><ellipse cx="124" cy="70" rx="22" ry="11"/>
+              <ellipse cx="168" cy="70" rx="22" ry="11"/><ellipse cx="212" cy="70" rx="22" ry="11"/>
+              <ellipse cx="256" cy="70" rx="22" ry="11"/><ellipse cx="300" cy="70" rx="22" ry="11"/>
+              <ellipse cx="344" cy="70" rx="22" ry="11"/><ellipse cx="388" cy="70" rx="22" ry="11"/>
+            </g>
+            <g font-size="13" text-anchor="middle" font-weight="700">
+              <text x="80" y="45">1</text><text x="124" y="45">2</text><text x="168" y="45">3</text><text x="212" y="45">4</text>
+              <text x="256" y="45">5</text><text x="300" y="45">6</text><text x="344" y="45">7</text><text x="388" y="45">8</text>
+            </g>
+            <ellipse cx="432" cy="70" rx="14" ry="11" fill="none" stroke="var(--terra)" stroke-width="5" stroke-dasharray="4 3"/>
+            <line x1="430" y1="70" x2="512" y2="70" stroke="var(--hook)" stroke-width="7" stroke-linecap="round"/>
+            <text x="460" y="105" text-anchor="middle" font-size="11">bucle de la aguja</text>
+            <text x="460" y="118" text-anchor="middle" font-size="11">(no cuenta)</text>
+          </g>
+        </svg>
+        <figcaption>Por delante, la cadeneta parece una fila de «V» u óvalos. Cada óvalo es 1 cadeneta. Ni el nudo ni el bucle de la aguja cuentan.</figcaption>
+      </figure>
+      <div class="tip">💡 Practica hasta que tus cadenetas tengan todas <b>el mismo tamaño</b>. Si cuesta meter la aguja, están apretadas: suelta un poco la mano del hilo.</div>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=cadeneta+ganchillo+principiantes+paso+a+paso+en+espa%C3%B1ol">Cómo hacer cadeneta</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=c%C3%B3mo+contar+cadenetas+ganchillo+en+espa%C3%B1ol">Cómo contar las cadenetas</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l0-5">
+    <summary><span class="num"><span>5</span></span><span class="t">Punto raso (pr) y rematar</span><span class="time">20 min</span></summary>
+    <div class="body">
+      <p>El <b>punto raso</b> (también «punto enano» o «punto deslizado») es el más bajito. Sirve para unir, cerrar vueltas y moverse sin ganar altura.</p>
+      <ol>
+        <li>Mete la aguja en el punto (por ejemplo, en una cadeneta).</li>
+        <li>Echa hebra.</li>
+        <li>Sácala de una vez <b>por el punto y por el bucle de la aguja</b>.</li>
+      </ol>
+      <h3>Rematar (terminar)</h3>
+      <ol>
+        <li>Corta el hilo dejando unos 15 cm.</li>
+        <li>Echa hebra y tira hasta que la cola salga entera por el bucle. Aprieta: ya no se deshace.</li>
+        <li>Con la aguja lanera, pasa la cola por dentro de los puntos, cambiando de dirección 2–3 veces, y corta.</li>
+      </ol>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=punto+raso+punto+enano+ganchillo+principiantes+en+espa%C3%B1ol">Punto raso (enano / deslizado)</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=rematar+y+esconder+hebras+ganchillo+en+espa%C3%B1ol">Rematar y esconder hebras</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p0-1">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: pulsera de cadeneta</span><span class="time">20–30 min</span></summary>
+    <div class="body">
+      <p><b>Practicas:</b> nudo corredizo, cadeneta, rematar.</p>
+      <ol>
+        <li>Haz cadenetas hasta que rodeen tu muñeca con holgura (unas 40–50 con aguja de 5 mm).</li>
+        <li>Remata dejando 15 cm de cola.</li>
+        <li>Haz otra igual de otro color y retuércelas juntas, o ata los extremos con un lazo.</li>
+      </ol>
+      <div class="tip">✅ Está bien hecha si todas las cadenetas tienen el mismo tamaño. Si no, ¡haz otra! Es la mejor práctica.</div>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p0-2">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: marcapáginas de cadeneta y punto raso</span><span class="time">30–40 min</span></summary>
+    <div class="body">
+      <p><b>Practicas:</b> cadeneta, punto raso, contar.</p>
+      <div class="pattern">Fila 1: 30 cad.
+Fila 2: 1 pr en la 2.ª cad desde la aguja y 1 pr en cada cad hasta el final (29 pr).
+Remata. En un extremo ata 3 hebras de 12 cm a modo de borla.</div>
+      <p>«En la 2.ª cad desde la aguja» significa: sin contar el bucle de la aguja, cuentas dos cadenetas hacia atrás y entras en esa.</p>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+</section>
+
+<!-- ===================== NIVEL 1 ===================== -->
+<section id="n1" class="level">
+  <div class="lvl-head c1">
+    <h2>Nivel 1 · El punto bajo y tejer en filas</h2>
+    <div class="meta"><span class="pill">🗓 Semanas 2–3</span><span class="pill">⏱ ~12 h en total</span><span class="pill">⭐ Principiante</span></div>
+  </div>
+
+  <details class="lesson" data-id="l1-1">
+    <summary><span class="num"><span>1</span></span><span class="t">Dónde se mete la aguja: la «V» del punto</span><span class="time">10 min</span></summary>
+    <div class="body">
+      <p>Mira la parte de arriba de cualquier fila: verás una hilera de <b>«V» tumbadas</b>. Cada V es la cabeza de un punto y tiene dos hebras.</p>
+      <figure>
+        <svg viewBox="0 0 520 190" role="img" aria-label="Hebra delantera y trasera del punto">
+          <g class="draw">
+            <g fill="none" stroke-width="7" stroke-linecap="round">
+              <path d="M120 90 Q200 60 280 90" stroke="var(--terra)"/>
+              <path d="M120 110 Q200 140 280 110" stroke="#e29a77"/>
+              <path d="M280 90 Q360 60 440 90" stroke="var(--terra)" opacity=".5"/>
+              <path d="M280 110 Q360 140 440 110" stroke="#e29a77" opacity=".5"/>
+            </g>
+            <line x1="200" y1="20" x2="200" y2="170" stroke="var(--hook)" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 0"/>
+            <path d="M190 25 l10 -12 l10 12" fill="var(--hook)"/>
+            <text x="60" y="80" font-size="13">hebra trasera</text>
+            <text x="50" y="140" font-size="13">hebra delantera</text>
+            <text x="300" y="175" font-size="13" text-anchor="middle">→ entra por debajo de LAS DOS hebras</text>
+          </g>
+        </svg>
+        <figcaption>Vista desde arriba. Salvo que el patrón diga lo contrario, la aguja entra por debajo de <b>las dos hebras</b> de la V.</figcaption>
+      </figure>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=d%C3%B3nde+meter+la+aguja+ganchillo+dos+hebras+del+punto+en+espa%C3%B1ol">Dónde se mete la aguja</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he entendido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l1-2">
+    <summary><span class="num"><span>2</span></span><span class="t">El punto bajo (pb)</span><span class="time">1 h de práctica</span></summary>
+    <div class="body">
+      <p>El punto más importante del ganchillo y <b>el único que necesitas para los amigurumis</b>. Fíjate en cuántos bucles tienes en la aguja en cada paso.</p>
+      <figure>
+        <svg viewBox="0 0 520 200" role="img" aria-label="Pasos del punto bajo">
+          <g class="draw">
+            <g font-size="14" font-weight="700" text-anchor="middle"><text x="90" y="22">1</text><text x="260" y="22">2</text><text x="430" y="22">3</text></g>
+            <line x1="20" y1="80" x2="170" y2="80" stroke="var(--hook)" stroke-width="8" stroke-linecap="round"/>
+            <ellipse cx="110" cy="80" rx="10" ry="16" fill="none" stroke="var(--yarn)" stroke-width="5"/>
+            <path d="M30 80 l-10 -10" stroke="var(--hook)" stroke-width="6" stroke-linecap="round"/>
+            <path d="M40 150 Q60 120 40 95" stroke="var(--terra)" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+            <text x="90" y="175" text-anchor="middle" font-size="12">mete la aguja en el punto,</text>
+            <text x="90" y="190" text-anchor="middle" font-size="12">echa hebra y sácala</text>
+            <line x1="190" y1="80" x2="340" y2="80" stroke="var(--hook)" stroke-width="8" stroke-linecap="round"/>
+            <path d="M200 80 l-10 -10" stroke="var(--hook)" stroke-width="6" stroke-linecap="round"/>
+            <ellipse cx="250" cy="80" rx="10" ry="16" fill="none" stroke="var(--yarn)" stroke-width="5"/>
+            <ellipse cx="285" cy="80" rx="10" ry="16" fill="none" stroke="var(--yarn)" stroke-width="5"/>
+            <text x="268" y="125" text-anchor="middle" font-size="13" font-weight="700">2 bucles</text>
+            <text x="260" y="175" text-anchor="middle" font-size="12">echa hebra otra vez y</text>
+            <text x="260" y="190" text-anchor="middle" font-size="12">sácala por los 2 bucles</text>
+            <line x1="360" y1="80" x2="510" y2="80" stroke="var(--hook)" stroke-width="8" stroke-linecap="round"/>
+            <path d="M370 80 l-10 -10" stroke="var(--hook)" stroke-width="6" stroke-linecap="round"/>
+            <ellipse cx="450" cy="80" rx="10" ry="16" fill="none" stroke="var(--yarn)" stroke-width="5"/>
+            <text x="450" y="125" text-anchor="middle" font-size="13" font-weight="700">1 bucle</text>
+            <text x="430" y="175" text-anchor="middle" font-size="12">¡punto bajo terminado!</text>
+          </g>
+          <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="var(--terra)"/></marker></defs>
+        </svg>
+      </figure>
+      <ol>
+        <li>Haz 15 cadenetas.</li>
+        <li>Mete la aguja en la <b>2.ª cadeneta desde la aguja</b>.</li>
+        <li>Echa hebra y sácala por esa cadeneta → tienes <b>2 bucles</b> en la aguja.</li>
+        <li>Echa hebra y sácala por los <b>2 bucles</b> → queda 1. ¡Ya está!</li>
+        <li>Haz 1 pb en cada cadeneta hasta el final. Deberías tener <b>14 pb</b>.</li>
+      </ol>
+      <div class="tip">💡 Di en voz alta: «entro, hebra, saco… hebra, saco por dos». Parece una tontería, pero ayuda muchísimo a memorizar el ritmo.</div>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=punto+bajo+ganchillo+principiantes+paso+a+paso+en+espa%C3%B1ol">Punto bajo paso a paso</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Lanas+y+Ovillos+punto+bajo+crochet">Punto bajo · búsqueda en el canal Lanas y Ovillos</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l1-3">
+    <summary><span class="num"><span>3</span></span><span class="t">Dar la vuelta y cadeneta de subida</span><span class="time">45 min</span></summary>
+    <div class="body">
+      <p>Al terminar una fila, <b>giras el trabajo como si pasaras la página de un libro</b> y tejes de vuelta sobre la fila anterior.</p>
+      <ol>
+        <li>Al final de la fila, haz <b>1 cadeneta</b> («cadeneta de subida»). En punto bajo <b>no cuenta</b> como punto.</li>
+        <li>Gira el trabajo.</li>
+        <li>Haz el primer pb en el <b>primer punto</b> (el que está justo debajo de la aguja).</li>
+        <li>Haz 1 pb en cada punto. El último va en el último punto de la fila anterior (es fácil saltárselo: está un poco escondido).</li>
+        <li><b>Cuenta los puntos</b> al final de cada fila. Siempre deben ser los mismos.</li>
+      </ol>
+      <div class="tip">💡 Pon un marcador en el primer y en el último punto de cada fila. Así nunca te los saltas y los bordes salen rectos.</div>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=ganchillo+c%C3%B3mo+girar+el+trabajo+cadeneta+de+subida+bordes+rectos+en+espa%C3%B1ol">Girar y que los bordes queden rectos</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p1-1">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: muestra de punto bajo</span><span class="time">1,5–2 h</span></summary>
+    <div class="body">
+      <p>Un cuadrado de práctica. No tiene que ser bonito: es para que las manos aprendan.</p>
+      <div class="pattern">Fila 1: 21 cad. 1 pb en la 2.ª cad desde la aguja y 1 pb en cada cad (20 pb).
+Filas 2 a 20: 1 cad de subida, girar, 1 pb en cada punto (20 pb).
+Remata y esconde hebras.</div>
+      <p>El número entre paréntesis es el total de puntos que debes tener al terminar esa fila.</p>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p1-2">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: posavasos cuadrado</span><span class="time">45 min – 1 h</span></summary>
+    <div class="body">
+      <p>Con hilo de algodón y aguja de 4–5 mm. Haz varios: el último saldrá mucho mejor que el primero.</p>
+      <div class="pattern">Fila 1: 16 cad. 1 pb en la 2.ª cad desde la aguja y en cada cad (15 pb).
+Filas 2 a 15 (o hasta que sea cuadrado): 1 cad, girar, 15 pb.
+Borde (opcional): sin cortar, haz pb alrededor de todo el cuadrado; en cada esquina haz 3 pb en el mismo punto. Cierra con 1 pr en el primer punto. Remata.</div>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p1-3">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: bufanda de punto bajo</span><span class="time">6–10 h</span></summary>
+    <div class="body">
+      <p>Tu primera prenda. Usa lana gruesa y aguja de <b>6–8 mm</b> para que avance rápido (unos 200–300 g).</p>
+      <div class="pattern">Fila 1: 21 cad. 1 pb en la 2.ª cad desde la aguja y en cada cad (20 pb).
+Siguientes filas: 1 cad, girar, 20 pb.
+Repite hasta que mida 140–160 cm. Remata y esconde hebras.
+Flecos (opcional): hebras de 25 cm dobladas por la mitad y anudadas en los extremos.</div>
+      <div class="tip">💡 Cuenta los 20 puntos al final de cada fila, al menos las 10 primeras. Si la bufanda se ensancha o estrecha, es que estás añadiendo o saltando puntos en los bordes.</div>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+</section>
+
+<!-- ===================== NIVEL 2 ===================== -->
+<section id="n2" class="level">
+  <div class="lvl-head c2">
+    <h2>Nivel 2 · Medio punto alto, punto alto y patrones</h2>
+    <div class="meta"><span class="pill">🗓 Semanas 4–5</span><span class="pill">⏱ ~9 h en total</span><span class="pill">⭐⭐ Principiante+</span></div>
+  </div>
+
+  <details class="lesson" data-id="l2-1">
+    <summary><span class="num"><span>1</span></span><span class="t">Las alturas de los puntos</span><span class="time">5 min</span></summary>
+    <div class="body">
+      <figure>
+        <svg viewBox="0 0 520 210" role="img" aria-label="Comparación de alturas de los puntos">
+          <g class="draw">
+            <line x1="20" y1="180" x2="500" y2="180" stroke="var(--line)" stroke-width="3"/>
+            <rect x="50" y="165" width="50" height="15" rx="6" fill="var(--sun)"/>
+            <rect x="160" y="140" width="50" height="40" rx="8" fill="var(--terra)"/>
+            <rect x="270" y="110" width="50" height="70" rx="8" fill="var(--sage)"/>
+            <rect x="380" y="70" width="50" height="110" rx="8" fill="var(--sky)"/>
+            <g font-size="13" text-anchor="middle">
+              <text x="75" y="155" font-weight="700">pr</text><text x="75" y="198">0 cad</text>
+              <text x="185" y="130" font-weight="700">pb</text><text x="185" y="198">1 cad de subida</text>
+              <text x="295" y="100" font-weight="700">pma</text><text x="295" y="198">2 cad</text>
+              <text x="405" y="60" font-weight="700">pa</text><text x="405" y="198">3 cad</text>
+            </g>
+          </g>
+        </svg>
+        <figcaption>Cuanto más alto es el punto, más cadenetas de subida necesitas al empezar cada fila.</figcaption>
+      </figure>
+      <label class="done-box"><input type="checkbox"> Lo he entendido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l2-2">
+    <summary><span class="num"><span>2</span></span><span class="t">Medio punto alto (pma)</span><span class="time">45 min</span></summary>
+    <div class="body">
+      <ol>
+        <li><b>Echa hebra antes</b> de meter la aguja.</li>
+        <li>Mete la aguja en el punto, echa hebra y sácala → <b>3 bucles</b> en la aguja.</li>
+        <li>Echa hebra y sácala por los <b>3 bucles</b> de golpe.</li>
+      </ol>
+      <p><b>Para practicar:</b> 16 cad; el primer pma va en la <b>3.ª cad desde la aguja</b> (15 pma). En las siguientes filas: 2 cad de subida (en este curso <b>no cuentan</b> como punto), girar y 1 pma en cada punto, empezando por el primero.</p>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=medio+punto+alto+ganchillo+paso+a+paso+principiantes+en+espa%C3%B1ol">Medio punto alto paso a paso</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l2-3">
+    <summary><span class="num"><span>3</span></span><span class="t">Punto alto (pa)</span><span class="time">1 h</span></summary>
+    <div class="body">
+      <ol>
+        <li>Echa hebra, mete la aguja en el punto, echa hebra y sácala → <b>3 bucles</b>.</li>
+        <li>Echa hebra y sácala por <b>2</b> bucles → quedan 2.</li>
+        <li>Echa hebra y sácala por los <b>2</b> últimos → queda 1.</li>
+      </ol>
+      <p><b>Primera fila:</b> 18 cad; el primer pa va en la <b>4.ª cad desde la aguja</b>. Las 3 cadenetas que te saltas cuentan como el primer punto alto (16 pa en total).</p>
+      <p><b>Siguientes filas:</b> 3 cad (cuentan como 1.º pa), girar, <b>salta el primer punto</b> y haz 1 pa en cada punto. El último pa va en la 3.ª de las cadenetas de subida de la fila anterior.</p>
+      <div class="tip">💡 Así lo indican casi todos los patrones en castellano. Si los bordes te salen torcidos, es casi siempre por este primer o último punto: cuéntalos.</div>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=punto+alto+ganchillo+paso+a+paso+principiantes+en+espa%C3%B1ol">Punto alto paso a paso</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Tejiendo+Per%C3%BA+punto+alto+vareta+principiantes">Punto alto (vareta) · búsqueda en el canal Tejiendo Perú</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l2-4">
+    <summary><span class="num"><span>4</span></span><span class="t">Cambiar de color</span><span class="time">20 min</span></summary>
+    <div class="body">
+      <ol>
+        <li>Haz el último punto con el color viejo <b>hasta antes de la última lazada</b> (te quedan 2 bucles en la aguja si es pb).</li>
+        <li>Haz esa última lazada con el <b>color nuevo</b> y sácala.</li>
+        <li>Sigue con el color nuevo. Deja colas de 10 cm de los dos colores y escóndelas después.</li>
+      </ol>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=cambiar+de+color+ganchillo+principiantes+en+espa%C3%B1ol">Cambiar de color</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l2-5">
+    <summary><span class="num"><span>5</span></span><span class="t">Cómo leer un patrón escrito</span><span class="time">20 min</span></summary>
+    <div class="body">
+      <p>Los patrones son recetas con abreviaturas. Ejemplo:</p>
+      <div class="pattern">V3: (1 pb, 1 aum) x6 (18)</div>
+      <ul>
+        <li><b>V3</b> = vuelta (o fila) número 3.</li>
+        <li><b>(…) x6</b> = repite lo que hay entre paréntesis 6 veces. A veces se escribe con asteriscos: *1 pb, 1 aum* x6.</li>
+        <li><b>(18)</b> al final = total de puntos que debes tener al acabar esa vuelta. ¡Compruébalo siempre!</li>
+      </ul>
+      <p>Tienes todas las abreviaturas en el <a href="#ayuda">glosario</a>.</p>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=c%C3%B3mo+leer+un+patr%C3%B3n+de+ganchillo+abreviaturas+principiantes+en+espa%C3%B1ol">Cómo leer un patrón de ganchillo</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he entendido</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p2-1">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: toallita / salvamanteles de algodón</span><span class="time">2–3 h</span></summary>
+    <div class="body">
+      <p>Algodón y aguja de 4–5 mm. Combina los tres puntos que ya sabes.</p>
+      <div class="pattern">Fila 1: 26 cad. 1 pb en la 2.ª cad desde la aguja y en cada cad (25 pb).
+Fila 2: 2 cad (no cuentan), girar, 25 pma.
+Fila 3: 3 cad (cuentan como 1 pa), girar, saltar el 1.er punto, 24 pa (25 en total).
+Fila 4: 1 cad, girar, 25 pb.
+Repite las filas 2 a 4 hasta que sea cuadrada (unas 18–20 filas).
+Remata. Opcional: borde de pb alrededor con 3 pb en cada esquina.</div>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p2-2">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: granny square (cuadrado de la abuela)</span><span class="time">1–2 h</span></summary>
+    <div class="body">
+      <p>El clásico del ganchillo. Se teje en redondo desde el centro, a base de grupos de 3 pa. Uniendo muchos se hacen mantas, bolsos o cojines.</p>
+      <figure>
+        <svg viewBox="0 0 520 260" role="img" aria-label="Esquema del granny square">
+          <g class="draw">
+            <rect x="185" y="55" width="150" height="150" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 4"/>
+            <circle cx="260" cy="130" r="12" fill="none" stroke="var(--sun)" stroke-width="5"/>
+            <g fill="var(--terra)">
+              <rect x="226" y="98" width="20" height="10" rx="4"/><rect x="274" y="98" width="20" height="10" rx="4"/>
+              <rect x="226" y="152" width="20" height="10" rx="4"/><rect x="274" y="152" width="20" height="10" rx="4"/>
+            </g>
+            <g fill="var(--sage)">
+              <rect x="196" y="66" width="22" height="10" rx="4"/><rect x="302" y="66" width="22" height="10" rx="4"/>
+              <rect x="196" y="184" width="22" height="10" rx="4"/><rect x="302" y="184" width="22" height="10" rx="4"/>
+              <rect x="249" y="66" width="22" height="10" rx="4"/><rect x="249" y="184" width="22" height="10" rx="4"/>
+              <rect x="196" y="125" width="10" height="22" rx="4"/><rect x="314" y="125" width="10" height="22" rx="4"/>
+            </g>
+            <text x="345" y="70" font-size="13">esquinas:</text>
+            <text x="345" y="88" font-size="13">3 pa, 2 cad, 3 pa</text>
+            <text x="345" y="106" font-size="13">en el mismo hueco</text>
+            <text x="345" y="150" font-size="13">lados: 3 pa en</text>
+            <text x="345" y="168" font-size="13">el hueco de 1 cad</text>
+            <text x="30" y="125" font-size="13" style="fill:var(--terra)">■ vuelta 1</text>
+            <text x="30" y="145" font-size="13" style="fill:var(--sage)">■ vueltas 2–3</text>
+            <text x="260" y="240" font-size="13" text-anchor="middle">Cada rectángulo = un grupo de 3 puntos altos</text>
+          </g>
+        </svg>
+      </figure>
+      <div class="pattern">Inicio: 4 cad y 1 pr en la 1.ª cad para cerrar un anillo.
+V1: 3 cad (= 1 pa), 2 pa en el anillo, 2 cad, [3 pa en el anillo, 2 cad] x3. 1 pr en la 3.ª cad del inicio. (4 grupos)
+V2: 1 pr en cada uno de los 2 pa siguientes y 1 pr en el hueco de esquina.
+    3 cad, 2 pa, 2 cad, 3 pa en ese mismo hueco; 1 cad.
+    [En el siguiente hueco de esquina: 3 pa, 2 cad, 3 pa; 1 cad] x3.
+    1 pr en la 3.ª cad del inicio. (8 grupos)
+V3: pr hasta el hueco de esquina como en V2. 3 cad, 2 pa, 2 cad, 3 pa en la esquina; 1 cad;
+    3 pa en el hueco del lado; 1 cad.
+    [En la esquina: 3 pa, 2 cad, 3 pa; 1 cad; 3 pa en el hueco del lado; 1 cad] x3.
+    1 pr en la 3.ª cad del inicio. (12 grupos)
+Cada vuelta nueva: igual, con un grupo más de 3 pa en cada lado.</div>
+      <div class="tip">💡 Para cambiar de color en cada vuelta: remata al final de la vuelta y empieza el color nuevo en un hueco de esquina.</div>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=granny+square+ganchillo+paso+a+paso+principiantes+en+espa%C3%B1ol">Granny square paso a paso</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=c%C3%B3mo+unir+granny+squares+ganchillo+en+espa%C3%B1ol">Cómo unir granny squares</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+</section>
+
+<!-- ===================== NIVEL 3 ===================== -->
+<section id="n3" class="level">
+  <div class="lvl-head c3">
+    <h2>Nivel 3 · Tejer en redondo</h2>
+    <div class="meta"><span class="pill">🗓 Semanas 6–7</span><span class="pill">⏱ ~7 h en total</span><span class="pill">⭐⭐ Intermedio inicial</span></div>
+  </div>
+  <p>Todos los amigurumis se tejen en redondo. Este nivel es el puente directo hacia ellos.</p>
+
+  <details class="lesson" data-id="l3-1">
+    <summary><span class="num"><span>1</span></span><span class="t">El anillo mágico (am)</span><span class="time">45 min</span></summary>
+    <div class="body">
+      <p>Es la forma de empezar un círculo sin que quede agujero en el centro. Al principio cuesta: <b>es normal necesitar 5 o 10 intentos</b>.</p>
+      <figure>
+        <svg viewBox="0 0 520 190" role="img" aria-label="Pasos del anillo mágico">
+          <g class="draw">
+            <g font-size="14" font-weight="700" text-anchor="middle"><text x="90" y="22">1</text><text x="260" y="22">2</text><text x="430" y="22">3</text></g>
+            <circle cx="90" cy="90" r="40" fill="none" stroke="var(--yarn)" stroke-width="5"/>
+            <path d="M90 130 L60 175 M96 130 L130 175" stroke="var(--yarn)" stroke-width="5" stroke-linecap="round"/>
+            <text x="40" y="186" font-size="11">cola</text><text x="118" y="186" font-size="11">ovillo</text>
+            <circle cx="260" cy="90" r="40" fill="none" stroke="var(--yarn)" stroke-width="5"/>
+            <g stroke="var(--terra)" stroke-width="7" stroke-linecap="round">
+              <line x1="260" y1="44" x2="260" y2="58"/><line x1="300" y1="70" x2="288" y2="77"/><line x1="300" y1="112" x2="288" y2="104"/>
+              <line x1="260" y1="136" x2="260" y2="122"/><line x1="220" y1="112" x2="232" y2="104"/><line x1="220" y1="70" x2="232" y2="77"/>
+            </g>
+            <path d="M262 130 L262 178" stroke="var(--yarn)" stroke-width="5"/>
+            <text x="260" y="186" text-anchor="middle" font-size="11">6 pb dentro del anillo</text>
+            <circle cx="430" cy="90" r="22" fill="none" stroke="var(--yarn)" stroke-width="5"/>
+            <circle cx="430" cy="90" r="5" fill="var(--yarn)"/>
+            <g stroke="var(--terra)" stroke-width="7" stroke-linecap="round">
+              <line x1="430" y1="62" x2="430" y2="50"/><line x1="454" y1="76" x2="465" y2="70"/><line x1="454" y1="104" x2="465" y2="110"/>
+              <line x1="430" y1="118" x2="430" y2="130"/><line x1="406" y1="104" x2="395" y2="110"/><line x1="406" y1="76" x2="395" y2="70"/>
+            </g>
+            <path d="M430 95 L430 170" stroke="var(--yarn)" stroke-width="4"/><path d="M422 160 l8 14 l8 -14" fill="var(--terra)"/>
+            <text x="430" y="186" text-anchor="middle" font-size="11">tira de la cola: se cierra</text>
+          </g>
+        </svg>
+      </figure>
+      <ol>
+        <li>Enrolla el hilo dos veces alrededor de dos dedos (índice y corazón), con la cola delante.</li>
+        <li>Mete la aguja por debajo de las vueltas, coge el hilo del ovillo y sácalo. Haz 1 cad para fijarlo (no cuenta).</li>
+        <li>Saca el anillo de los dedos con cuidado. Haz <b>6 pb dentro del anillo</b> (por el centro, envolviendo las vueltas y la cola).</li>
+        <li>Tira de la cola: el agujero se cierra. Si hiciste 2 vueltas, tira primero del bucle que se mueve y luego otra vez de la cola.</li>
+      </ol>
+      <div class="tip">💡 Si se te resiste, empieza así: <b>2 cad y 6 pb en la 2.ª cad desde la aguja</b>. Queda un agujerito mínimo y el resultado es casi igual.</div>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=anillo+m%C3%A1gico+ganchillo+paso+a+paso+principiantes+en+espa%C3%B1ol">Anillo mágico paso a paso</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=anillo+m%C3%A1gico+ganchillo+zurdos+en+espa%C3%B1ol">Anillo mágico para zurdos</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l3-2">
+    <summary><span class="num"><span>2</span></span><span class="t">Aumentos (aum) y el círculo plano</span><span class="time">1 h</span></summary>
+    <div class="body">
+      <p>Un <b>aumento</b> es hacer <b>2 pb en el mismo punto</b>: de 1 punto salen 2. Así el círculo crece.</p>
+      <figure>
+        <svg viewBox="0 0 520 230" role="img" aria-label="Círculo plano con aumentos">
+          <g class="draw">
+            <circle cx="150" cy="115" r="18" fill="var(--sun)"/>
+            <circle cx="150" cy="115" r="42" fill="none" stroke="var(--terra)" stroke-width="16" opacity=".85"/>
+            <circle cx="150" cy="115" r="66" fill="none" stroke="var(--sage)" stroke-width="16" opacity=".85"/>
+            <circle cx="150" cy="115" r="90" fill="none" stroke="var(--sky)" stroke-width="16" opacity=".85"/>
+            <g font-size="13">
+              <text x="290" y="60"><tspan font-weight="700" fill="#b8861f">V1:</tspan> 6 pb en el am (6)</text>
+              <text x="290" y="90"><tspan font-weight="700" fill="var(--terra)">V2:</tspan> 6 aum (12)</text>
+              <text x="290" y="120"><tspan font-weight="700" fill="var(--sage)">V3:</tspan> (1 pb, 1 aum) x6 (18)</text>
+              <text x="290" y="150"><tspan font-weight="700" fill="var(--sky)">V4:</tspan> (2 pb, 1 aum) x6 (24)</text>
+              <text x="290" y="185">Cada vuelta: +6 puntos y</text>
+              <text x="290" y="203">1 pb más antes del aumento</text>
+            </g>
+          </g>
+        </svg>
+      </figure>
+      <h3>En espiral (sin cerrar las vueltas)</h3>
+      <p>En amigurumi <b>no se cierra</b> cada vuelta con punto raso: se sigue tejiendo en espiral. Por eso es imprescindible el <b>marcador</b>:</p>
+      <ol>
+        <li>Pon el marcador en el <b>primer punto</b> de la vuelta.</li>
+        <li>Cuando llegues de nuevo al marcador, se ha acabado la vuelta: cuenta los puntos.</li>
+        <li>Quita el marcador, haz el primer punto de la nueva vuelta y vuelve a ponerlo en ese punto.</li>
+      </ol>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=aumentos+ganchillo+en+redondo+c%C3%ADrculo+plano+en+espiral+marcador+en+espa%C3%B1ol">Aumentos y círculo en espiral</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p3-1">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: posavasos redondo</span><span class="time">45 min – 1 h</span></summary>
+    <div class="body">
+      <p>Algodón y aguja de 4 mm. Unos 10–11 cm de diámetro.</p>
+      <div class="pattern">V1: 6 pb en am (6)
+V2: 6 aum (12)
+V3: (1 pb, 1 aum) x6 (18)
+V4: (2 pb, 1 aum) x6 (24)
+V5: (3 pb, 1 aum) x6 (30)
+V6: (4 pb, 1 aum) x6 (36)
+V7: (5 pb, 1 aum) x6 (42)
+V8: (6 pb, 1 aum) x6 (48)
+1 pr en el siguiente punto. Remata y esconde la hebra.</div>
+      <div class="tip">💡 Si el círculo se ondula como una lechuga, tienes demasiados aumentos; si se curva como un cuenco, te faltan. Cuenta cada vuelta.</div>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p3-2">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: cestita</span><span class="time">3–4 h</span></summary>
+    <div class="body">
+      <p>Una base redonda y luego paredes rectas. ¡Es la idea exacta de un amigurumi, pero abierto!</p>
+      <div class="pattern">V1 a V6: igual que el posavasos (36)
+V7: 36 pb solo por la HEBRA TRASERA (así se marca el borde de la base)
+V8 a V20: 36 pb (sin aumentos: la pared sube recta)
+1 pr en el siguiente punto. Remata y esconde hebras.
+Opcional: dobla las 3 últimas vueltas hacia fuera.</div>
+      <p><b>Hebra trasera</b>: en vez de entrar por debajo de las dos hebras de la V, entra solo por la de atrás (la más alejada de ti).</p>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=cesta+de+ganchillo+f%C3%A1cil+principiantes+punto+bajo+en+espa%C3%B1ol">Cesta de ganchillo fácil</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+</section>
+
+<!-- ===================== NIVEL 4 ===================== -->
+<section id="n4" class="level">
+  <div class="lvl-head c4">
+    <h2>Nivel 4 · Amigurumi básico</h2>
+    <div class="meta"><span class="pill">🗓 Semanas 8–9</span><span class="pill">⏱ ~6 h en total</span><span class="pill">⭐⭐⭐ Intermedio</span></div>
+  </div>
+  <p>Ahora cambia el material: <b>algodón y aguja de 2,5–3 mm</b>. El tejido tiene que quedar <b>apretado</b>, para que no se vea el relleno.</p>
+
+  <details class="lesson" data-id="l4-1">
+    <summary><span class="num"><span>1</span></span><span class="t">La disminución invisible (dism)</span><span class="time">30 min</span></summary>
+    <div class="body">
+      <p>Una <b>disminución</b> une 2 puntos en 1, para que la pieza se cierre. La versión «invisible» queda casi igual que un punto normal.</p>
+      <figure>
+        <svg viewBox="0 0 520 200" role="img" aria-label="Aumento y disminución">
+          <g class="draw">
+            <text x="130" y="24" text-anchor="middle" font-size="14" font-weight="700">Aumento: 1 → 2</text>
+            <rect x="105" y="150" width="50" height="14" rx="6" fill="var(--line)"/>
+            <path d="M130 150 L95 70 M130 150 L165 70" stroke="var(--terra)" stroke-width="10" stroke-linecap="round"/>
+            <text x="130" y="185" text-anchor="middle" font-size="12">2 pb en el mismo punto</text>
+            <text x="390" y="24" text-anchor="middle" font-size="14" font-weight="700">Disminución: 2 → 1</text>
+            <rect x="335" y="150" width="50" height="14" rx="6" fill="var(--line)"/>
+            <rect x="395" y="150" width="50" height="14" rx="6" fill="var(--line)"/>
+            <path d="M360 150 L390 70 M420 150 L390 70" stroke="var(--plum)" stroke-width="10" stroke-linecap="round"/>
+            <text x="390" y="185" text-anchor="middle" font-size="12">1 pb que agarra 2 puntos</text>
+          </g>
+        </svg>
+      </figure>
+      <ol>
+        <li>Mete la aguja solo por la <b>hebra delantera</b> del siguiente punto.</li>
+        <li>Sin sacarla, métela también por la <b>hebra delantera</b> del punto de después. Tienes 3 bucles en la aguja.</li>
+        <li>Echa hebra y sácala por las 2 hebras delanteras → quedan <b>2 bucles</b>.</li>
+        <li>Echa hebra y sácala por los 2. ¡Hecho!</li>
+      </ol>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=disminuci%C3%B3n+invisible+amigurumi+paso+a+paso+en+espa%C3%B1ol">Disminución invisible</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he conseguido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l4-2">
+    <summary><span class="num"><span>2</span></span><span class="t">Cómo se forma una esfera</span><span class="time">10 min</span></summary>
+    <div class="body">
+      <p>Casi todo amigurumi está hecho de esferas y tubos. La receta es siempre la misma:</p>
+      <figure>
+        <svg viewBox="0 0 520 240" role="img" aria-label="Esquema de una esfera de amigurumi">
+          <g class="draw">
+            <path d="M160 30 C 60 50 60 190 160 210 C 260 190 260 50 160 30 Z" fill="#f6e1d6" stroke="var(--terra)" stroke-width="3"/>
+            <path d="M160 30 L160 210" stroke="none"/>
+            <rect x="80" y="30" width="160" height="60" fill="var(--sun)" opacity=".25"/>
+            <rect x="80" y="90" width="160" height="60" fill="var(--sage)" opacity=".25"/>
+            <rect x="80" y="150" width="160" height="60" fill="var(--plum)" opacity=".25"/>
+            <g font-size="13">
+              <text x="270" y="55" font-weight="700">1. Aumentos</text><text x="270" y="73">la pieza crece (6 → 12 → 18 → 24)</text>
+              <text x="270" y="115" font-weight="700">2. Vueltas rectas</text><text x="270" y="133">mismo nº de puntos: la pieza sube</text>
+              <text x="270" y="175" font-weight="700">3. Disminuciones</text><text x="270" y="193">se cierra (24 → 18 → 12 → 6)</text>
+            </g>
+          </g>
+        </svg>
+        <figcaption>Rellena <b>antes</b> de que el agujero sea demasiado pequeño (normalmente cuando quedan 12 puntos).</figcaption>
+      </figure>
+      <label class="done-box"><input type="checkbox"> Lo he entendido</label>
+    </div>
+  </details>
+
+  <details class="lesson" data-id="l4-3">
+    <summary><span class="num"><span>3</span></span><span class="t">Rellenar, cerrar y coser piezas</span><span class="time">30 min</span></summary>
+    <div class="body">
+      <ul>
+        <li><b>Rellenar:</b> pon el relleno en trocitos pequeños, no en una bola. Que quede firme, pero sin que se abran los puntos.</li>
+        <li><b>Cerrar el agujero final:</b> corta dejando 20 cm, pasa la hebra con la aguja lanera por la hebra delantera de cada uno de los últimos puntos y tira, como cerrando una bolsa. Mete la aguja por el centro, sácala por otro lado y corta a ras.</li>
+        <li><b>Coser piezas:</b> deja una hebra larga (30 cm), sujeta la pieza con alfileres y cose punto a punto, alternando un punto de una pieza y uno de la otra.</li>
+        <li><b>Ojos de seguridad:</b> se ponen <b>antes de rellenar y cerrar</b>; la arandela se coloca por dentro.</li>
+      </ul>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=cerrar+amigurumi+agujero+final+invisible+en+espa%C3%B1ol">Cerrar el agujero final</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=c%C3%B3mo+coser+piezas+amigurumi+principiantes+en+espa%C3%B1ol">Cómo coser las piezas</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=bordar+cara+amigurumi+ojos+nariz+en+espa%C3%B1ol">Bordar la cara</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> Lo he entendido</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p4-1">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: pelotita amigurumi</span><span class="time">1,5–2 h</span></summary>
+    <div class="body">
+      <p>Tu primera pieza 3D. Unos 5–6 cm. Cuando la hayas hecho, ya sabes hacer la cabeza de cualquier muñeco.</p>
+      <div class="pattern">V1: 6 pb en am (6)
+V2: 6 aum (12)
+V3: (1 pb, 1 aum) x6 (18)
+V4: (2 pb, 1 aum) x6 (24)
+V5 a V8: 24 pb (4 vueltas)
+V9: (2 pb, 1 dism) x6 (18)
+V10: (1 pb, 1 dism) x6 (12)
+Rellena bien.
+V11: 6 dism (6)
+Cierra el agujero y esconde la hebra.</div>
+      <div class="tip">💡 Hazla a rayas cambiando de color cada 2 vueltas: así verás muy bien cómo se forma la esfera.</div>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=bola+amigurumi+paso+a+paso+principiantes+en+espa%C3%B1ol">Bola de amigurumi paso a paso</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+
+  <details class="lesson project" data-id="p4-2">
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto: pulpito</span><span class="time">2–3 h</span></summary>
+    <div class="body">
+      <p>Cabeza = la pelotita. Patas = cadenetas rizadas. Muy fácil y queda precioso.</p>
+      <div class="pattern">CABEZA
+V1 a V8: igual que la pelotita (24)
+Coloca los ojos entre V6 y V7, separados 5 puntos.
+V9: (2 pb, 1 dism) x6 (18)
+V10: (1 pb, 1 dism) x6 (12)
+Rellena.
+V11: 6 dism (6). Cierra.
+
+PATAS (haz 8)
+13 cad. Empezando en la 2.ª cad desde la aguja: 2 pb en cada cad (24 pb).
+La pata se riza sola. Deja hebra para coser.
+Cose las 8 patas en círculo en la parte de abajo de la cabeza.</div>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=pulpo+amigurumi+f%C3%A1cil+principiantes+en+espa%C3%B1ol">Pulpito amigurumi fácil</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> ¡Terminado!</label>
+    </div>
+  </details>
+</section>
+
+<!-- ===================== NIVEL 5 ===================== -->
+<section id="n5" class="level">
+  <div class="lvl-head c5">
+    <h2>Nivel 5 · Tu primer amigurumi completo: el osito</h2>
+    <div class="meta"><span class="pill">🗓 Semanas 10–12</span><span class="pill">⏱ 6–10 h</span><span class="pill">⭐⭐⭐ Intermedio</span></div>
+  </div>
+
+  <details class="lesson project" data-id="p5-1" open>
+    <summary><span class="num"><span>★</span></span><span class="t">Proyecto final: osito (unos 12 cm)</span><span class="time">6–10 h</span></summary>
+    <div class="body">
+      <figure>
+        <svg viewBox="0 0 520 300" role="img" aria-label="Piezas del osito y cómo se montan">
+          <g class="draw">
+            <circle cx="180" cy="40" r="22" fill="#d9a77e"/><circle cx="280" cy="40" r="22" fill="#d9a77e"/>
+            <circle cx="230" cy="90" r="62" fill="#e7bb94"/>
+            <ellipse cx="230" cy="112" rx="24" ry="18" fill="#f6dcc4"/>
+            <ellipse cx="230" cy="104" rx="7" ry="5" fill="var(--ink)"/>
+            <circle cx="205" cy="82" r="5" fill="var(--ink)"/><circle cx="255" cy="82" r="5" fill="var(--ink)"/>
+            <ellipse cx="230" cy="200" rx="48" ry="56" fill="#e7bb94"/>
+            <rect x="160" y="160" width="22" height="58" rx="11" fill="#d9a77e" transform="rotate(20 171 160)"/>
+            <rect x="278" y="160" width="22" height="58" rx="11" fill="#d9a77e" transform="rotate(-20 289 160)"/>
+            <ellipse cx="205" cy="262" rx="18" ry="22" fill="#d9a77e"/><ellipse cx="255" cy="262" rx="18" ry="22" fill="#d9a77e"/>
+            <g font-size="13">
+              <text x="340" y="42">Orejas (x2)</text>
+              <text x="340" y="92">Cabeza</text>
+              <text x="340" y="118">Hocico</text>
+              <text x="340" y="190">Brazos (x2)</text>
+              <text x="340" y="215">Cuerpo</text>
+              <text x="340" y="268">Piernas (x2)</text>
+              <text x="20" y="150">Orden de montaje:</text>
+              <text x="20" y="170">1. cabeza + cuerpo</text>
+              <text x="20" y="190">2. piernas</text>
+              <text x="20" y="210">3. brazos</text>
+              <text x="20" y="230">4. orejas y hocico</text>
+              <text x="20" y="250">5. bordar la nariz</text>
+            </g>
+          </g>
+        </svg>
+        <figcaption>Algodón para aguja 3–3,5 mm, aguja de 2,5–3 mm, ojos de seguridad de 8 mm.</figcaption>
+      </figure>
+<div class="pattern">CABEZA
+V1: 6 pb en am (6)
+V2: 6 aum (12)
+V3: (1 pb, 1 aum) x6 (18)
+V4: (2 pb, 1 aum) x6 (24)
+V5: (3 pb, 1 aum) x6 (30)
+V6 a V10: 30 pb (5 vueltas)
+Coloca los ojos entre V8 y V9, separados 6 puntos.
+V11: (3 pb, 1 dism) x6 (24)
+V12: (2 pb, 1 dism) x6 (18)
+Rellena bien.
+V13: (1 pb, 1 dism) x6 (12)
+V14: 6 dism (6). Cierra.
+
+CUERPO
+V1: 6 pb en am (6)
+V2: 6 aum (12)
+V3: (1 pb, 1 aum) x6 (18)
+V4: (2 pb, 1 aum) x6 (24)
+V5 a V8: 24 pb (4 vueltas)
+V9: (2 pb, 1 dism) x6 (18)
+V10 y V11: 18 pb
+V12: (1 pb, 1 dism) x6 (12)
+1 pr. Remata dejando 40 cm de hebra. Rellena. NO cierres: se cose a la cabeza.
+
+PIERNAS (x2)
+V1: 6 pb en am (6)
+V2: 6 aum (12)
+V3 a V6: 12 pb (4 vueltas)
+Rellena. Remata dejando hebra para coser.
+
+BRAZOS (x2)
+V1: 6 pb en am (6)
+V2: (1 pb, 1 aum) x3 (9)
+V3 a V8: 9 pb (6 vueltas)
+Rellena solo un poco. Aplana la abertura y cósela al cuerpo.
+
+OREJAS (x2)
+V1: 6 pb en am (6)
+V2: 6 aum (12)
+V3: 12 pb
+1 pr. Remata dejando hebra. No rellenes: aplánalas y cóselas a la cabeza.
+
+HOCICO (color más claro)
+V1: 6 pb en am (6)
+V2: (1 pb, 1 aum) x3 (9)
+V3: 9 pb
+1 pr. Remata dejando hebra. Cóselo debajo de los ojos con un poquito de relleno.
+Borda la nariz con hilo oscuro.</div>
+      <div class="tip">💡 Antes de coser, sujeta todas las piezas con alfileres y míralo de frente y de lado. Cambiar un alfiler cuesta un segundo; descoser cuesta mucho más.</div>
+      <div class="videos">
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=osito+amigurumi+f%C3%A1cil+principiantes+paso+a+paso+en+espa%C3%B1ol">Osito amigurumi paso a paso</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=c%C3%B3mo+coser+cabeza+y+cuerpo+amigurumi+en+espa%C3%B1ol">Coser la cabeza al cuerpo</a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=c%C3%B3mo+poner+ojos+de+seguridad+amigurumi+en+espa%C3%B1ol">Cómo poner ojos de seguridad</a>
+      </div>
+      <label class="done-box"><input type="checkbox"> ¡Terminado! Soy amigurumista 🧸</label>
+    </div>
+  </details>
+
+  <div class="card">
+    <h3>Y después… ¿qué?</h3>
+    <ul>
+      <li>Cambia el osito: orejas largas → conejo; orejas en punta → gato; patas cortas y hocico largo → perrito. <b>La base es la misma.</b></li>
+      <li>Busca patrones gratis para principiantes y comprueba que usen solo am, pb, aum y dism.</li>
+      <li>Biblioteca de vídeos de técnicas en castellano de DROPS: <a target="_blank" rel="noopener" href="https://www.garnstudio.com/video.php?lang=es">garnstudio.com</a></li>
+    </ul>
+    <div class="videos">
+      <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=patr%C3%B3n+amigurumi+gratis+principiantes+en+espa%C3%B1ol">Patrones de amigurumi para principiantes</a>
+      <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=conejito+amigurumi+f%C3%A1cil+principiantes+en+espa%C3%B1ol">Conejito amigurumi fácil</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AYUDA ===================== -->
+<section id="ayuda" class="level">
+  <div class="lvl-head c0">
+    <h2>Glosario y problemas frecuentes</h2>
+  </div>
+
+  <div class="card">
+    <h3>Abreviaturas (y cómo se llaman en otros países)</h3>
+    <p>Muchos vídeos en castellano son de Latinoamérica y usan otros nombres. Esta tabla te salva:</p>
+    <table>
+      <tr><th>Aquí</th><th>Significa</th><th>También se llama</th><th>Inglés</th></tr>
+      <tr><td>cad</td><td>cadeneta</td><td>cadena</td><td>ch</td></tr>
+      <tr><td>pr</td><td>punto raso</td><td>punto enano, punto deslizado</td><td>sl st</td></tr>
+      <tr><td>pb</td><td>punto bajo</td><td>medio punto (Argentina)</td><td>sc</td></tr>
+      <tr><td>pma</td><td>medio punto alto</td><td>media vareta, punto medio alto</td><td>hdc</td></tr>
+      <tr><td>pa</td><td>punto alto</td><td>vareta</td><td>dc</td></tr>
+      <tr><td>am</td><td>anillo mágico</td><td>anillo ajustable</td><td>MR</td></tr>
+      <tr><td>aum</td><td>aumento (2 pb en el mismo punto)</td><td></td><td>inc</td></tr>
+      <tr><td>dism</td><td>disminución (2 puntos juntos)</td><td>menguado</td><td>dec / sc2tog</td></tr>
+      <tr><td>V / F</td><td>vuelta / fila</td><td>ronda</td><td>Rnd / Row</td></tr>
+      <tr><td>BLO / FLO</td><td>solo hebra trasera / delantera</td><td>lazada trasera / delantera</td><td>back / front loop only</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Problemas frecuentes</h3>
+    <table>
+      <tr><th>Me pasa que…</th><th>Por qué y cómo arreglarlo</th></tr>
+      <tr><td>El trabajo se ensancha o se estrecha</td><td>Añades o saltas puntos al principio o al final de la fila. Usa marcadores en el primer y último punto y <b>cuenta cada fila</b>.</td></tr>
+      <tr><td>No consigo meter la aguja</td><td>Tejes muy apretado. Afloja la mano del hilo y haz el bucle sobre la parte <b>gruesa</b> de la caña, no en la garganta.</td></tr>
+      <tr><td>El tejido queda flojo y con agujeros</td><td>Usa una aguja medio milímetro más pequeña, o tensa un poco más el hilo.</td></tr>
+      <tr><td>Me duele la mano</td><td>Aprietas la aguja. Relaja, haz pausas cada 20 min y prueba una aguja ergonómica.</td></tr>
+      <tr><td>Mi círculo hace ondas</td><td>Demasiados aumentos (o tejes muy flojo). Cuenta los puntos de cada vuelta.</td></tr>
+      <tr><td>Mi círculo se curva como un cuenco</td><td>Te faltan aumentos (o tejes muy apretado).</td></tr>
+      <tr><td>Se ve el relleno en el amigurumi</td><td>Baja el tamaño de la aguja (2–2,5 mm) y no rellenes en exceso.</td></tr>
+      <tr><td>Mi amigurumi está «del revés»</td><td>La cara bonita (con «V» marcadas) debe quedar fuera. Si ves rayitas horizontales, dale la vuelta a la pieza al empezar.</td></tr>
+      <tr><td>Me he equivocado</td><td>¡Desteje! Saca la aguja y tira del hilo hasta el error. Deshacer es parte normal del ganchillo.</td></tr>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Hecho con 🧶 para aprender sin prisa · Crochet Alba<br>
+  Los botones ▶ abren YouTube con vídeos en castellano sobre cada técnica: elige el que te guste y sigue con la aguja en la mano.
+</footer>
+
+<script>
+(function(){
+  var KEY='crochetAlba.v1';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){state={}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+  var lessons=[].slice.call(document.querySelectorAll('details.lesson'));
+  function refresh(){
+    var done=0;
+    lessons.forEach(function(d){
+      var on=!!state[d.dataset.id];
+      d.classList.toggle('is-done',on);
+      var cb=d.querySelector('.done-box input'); if(cb) cb.checked=on;
+      if(on) done++;
+    });
+    document.getElementById('barFill').style.width=(lessons.length?done/lessons.length*100:0)+'%';
+    document.getElementById('barText').textContent=done+' de '+lessons.length+' lecciones y proyectos completados';
+  }
+  lessons.forEach(function(d){
+    var cb=d.querySelector('.done-box input');
+    if(cb) cb.addEventListener('change',function(){
+      if(cb.checked) state[d.dataset.id]=1; else delete state[d.dataset.id];
+      save(); refresh();
+    });
+  });
+  var bz=document.getElementById('btnZurdo');
+  function setZ(on){document.body.classList.toggle('zurdo',on);bz.textContent=on?'✋ Modo zurdo activado':'✋ Soy zurda/o';}
+  setZ(!!state.__zurdo);
+  bz.addEventListener('click',function(){
+    var on=!document.body.classList.contains('zurdo');
+    if(on) state.__zurdo=1; else delete state.__zurdo;
+    save(); setZ(on);
+  });
+  refresh();
+})();
+</script>
+</body>
+</html>
